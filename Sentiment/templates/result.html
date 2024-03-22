@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Result</title>
+
+  <script src="https://kit.fontawesome.com/47101d2035.js" crossorigin="anonymous"></script>
+  
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2; 
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    .center-screen {
+      min-height: 100%; 
+      min-height: 100vh; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .info-box {
+      background-color: #ffffff;
+      border: 1px solid #030303;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+      padding: 2rem;
+      margin: 1rem;
+      width: 90%; 
+      max-width: 800px; 
+      text-align: left; 
+    }
+    .info-box img {
+    display: block;
+    margin: auto; 
+    max-width: 100%; 
+    height: auto; 
+  }
+
+    .info-box h1 {
+      font-size: 1.75rem;
+      color: #333;
+      margin: 0; 
+      padding: 0.5rem 0; 
+      background-color: transparent; 
+      white-space: nowrap;
+      overflow: hidden; 
+      text-overflow: ellipsis; 
+    }
+    .info-box .value {
+      font-size: 2rem; 
+      font-weight: 500; 
+      color: #007bff; 
+    }
+    h2{
+      text-align: center;
+    }
+    h1{
+      text-align: center;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="center-screen">
+    <div class="info-box">
+      <h2>POLITICAL SENTIMENT ANALYSIS</h2><br>
+      <img class="center" src="{% static 'images/2.jpg' %}" alt="Notes image" width="500" height="500"><br>
+      <h1>Predicted Sentiment : <span class="value">{{result}}</span></h1>
+    </div>
+  </div>
+</body>
+
+</html>
+
